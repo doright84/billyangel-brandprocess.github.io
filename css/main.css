@@ -85,71 +85,6 @@ body {
     top: 0;
 }
 
-/* 안내창 */
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-}
-
-.modal-cont {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    display: block;
-    width: 550px;
-    height: 350px;
-    background: #fff;
-    border-radius: 20px;
-    padding: 50px;
-    text-align: center;
-    overflow: hidden;
-}
-.modal-cont>p {
-    position: relative;
-    display: block;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-.modal-cont>span {
-    position: relative;
-    display: block;
-    font-weight: 300;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.modal-cont>span>b {
-    font-weight: 600;
-}
-
-.modal-cont button {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 50px;
-    background: #d1c1c1;
-}
-
-.modal-cont button>img {
-    position: relative;
-    display: inline-block;
-    line-height: 50px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
 /* gotop */
 .gotop {
     position: fixed;
@@ -163,7 +98,7 @@ body {
     cursor: pointer;
     font-size: 0px;
     text-align: center;
-    background:url('../images/gotop_bg.png')no-repeat center;
+    background: url('../images/gotop_bg.png')no-repeat center;
     transition: all 0.3s;
     z-index: 999;
     color: #fff;
@@ -180,19 +115,25 @@ body {
 .header {
     height: 970px;
     background: url('../images/header_bg.jpg')no-repeat center;
+    background-size: cover;
 }
 
 .header .container {
     height: 100%;
 }
 
+.header-title {
+    position: absolute;
+    left: 0;
+    top: 270px;
+    display: block;
+}
+
 .header-logo {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 150px;
+    top: 170px;
     display: block;
-    animation: updown 1s infinite ease-in-out;
     animation-direction: alternate;
 }
 
@@ -217,7 +158,7 @@ body {
 }
 
 .overview-title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .overview-txt {
@@ -226,13 +167,13 @@ body {
 
 /* concept */
 .concept {
-    margin-top: 120px;
+    margin-top: 200px;
 }
 
 .concept-cont {
     position: relative;
     display: block;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
 .concept-top {
@@ -268,19 +209,19 @@ body {
 
 /* design */
 .design {
-    margin-top: 120px;
+    margin: 200px 0;
 }
 
 .design-cont-wrap {
     display: block;
-    margin-top: 100px;
-    padding: 80px 0;
+    margin-top: 150px;
+    padding: 0 130px;
 }
 
 .design-cont-wrap>li {
     position: relative;
     display: block;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .design-cont {
@@ -296,67 +237,79 @@ body {
 }
 
 .plus {
-    left: 375px;
+    left: 310px;
 }
 
 .equal {
-    left: 870px;
+    left: 693px;
 }
 
 .equal-txt {
-    left: 870px;
+    left: 695px;
     margin-top: -25px;
 }
 
 .arrow {
-    left: 435px;
+    left: 310px;
 }
 
 /* color */
-.color {}
+.color {
+    margin-bottom: 200px;
+}
 
 .color-cont {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    padding: 80px;
+    margin-top: 150px;
+    padding: 0 130px;
 }
 
 /* footer */
 .footer {
-    position: relative;
-    display: block;
-    height: 400px;
-    background: url('../images/footer_bg.jpg')no-repeat center;
+    line-height: 80px;
+    background-color: #f7eeee;
+    box-shadow: -3px 0 30px 10px rgba(201, 161, 161, 0.5);
+
 }
 
-.footer .container{
-    height: 100%;
-    display: block;
-    padding-top: 180px;
-}
-.footer-cont {
+.footer>div {
     position: relative;
     display: block;
+    float: left;
+    width: 50%;
     text-align: center;
-    width: 40%;
-    margin: 0 auto;
+    height: 80px;
+    background: #f7eeee;
+    transition: all 0.3s;
 }
 
-.footer-txt {
-    position: relative;
-    transition: 0.3s;
-    z-index: 3; 
-}
-
-.footer-cont:hover>.footer-txt {
-    margin-left: -110px;
-}
-
-.footer-bt {
+.line {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    left: 50%;
+    bottom: -80px;
     display: block;
+    width: 2px;
+    height: 80px;
+    background-color: #e1baba;
+}
+
+.footer-on {
+    height: 120px !important;
+    margin-top: -40px;
+    border-radius: 30px 30px 0 0;
+    background-color: #e1baba !important;
+}
+
+.footer-a {
+    display: inline-block;
+    color: #666;
+    font-size: 24px;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+.f-text-on {
+    color: #333;
 }
